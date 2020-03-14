@@ -1,0 +1,29 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# Distribution / packaging
+build/
+dist/
+
+# Dependency directories
+node_modules/
+
+# Environments
+.env/
+.venv/
+env/
+venv/
+ENV/
+
+# Django stuff:
+local_settings.py
+db.sqlite3
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# Logs
+*.log
+*.logs
