@@ -1,0 +1,10 @@
+{
+    "python.pythonPath": ".venv/bin/python3",
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.autoComplete.extraPaths": [
+        "server/",
+    ],
+    "python.autoComplete.addBrackets": true,
+    "importMagic.maxColumns": 96,
+}
