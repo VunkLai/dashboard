@@ -7,4 +7,5 @@
     ],
     "python.autoComplete.addBrackets": true,
     "importMagic.maxColumns": 96,
+    "vetur.validation.template": false
 }
