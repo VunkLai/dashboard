@@ -1,9 +1,16 @@
 import React from "react";
+import { useRoutes } from "react-router-dom";
+import routes from "./routes";
 
-class App extends React.Component {
-  render() {
-    return <div className="App">App</div>;
-  }
+function App() {
+  const content = useRoutes(routes);
+  return (
+    <div className="App">
+      App
+      <hr />
+      {content}
+    </div>
+  );
 }
 
 export default App;
