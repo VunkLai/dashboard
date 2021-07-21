@@ -1,5 +1,7 @@
 import React from "react";
 
-export default function Error404() {
+function NotFound() {
   return <div>404 Not Found</div>;
 }
+
+export default NotFound;
