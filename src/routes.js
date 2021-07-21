@@ -2,6 +2,7 @@ import { lazy } from "react";
 import Suspense from "./components/loading/Suspense";
 
 import ErrorLayout from "./layouts/ErrorLayout";
+import MainLayout from "./layouts/MainLayout";
 
 const Home = Suspense(lazy(() => import("./pages/Home")));
 const Dashboard = Suspense(lazy(() => import("./pages/Dashboard")));
@@ -14,6 +15,7 @@ const ServerError = Suspense(lazy(() => import("./errors/ServerError")));
 const routes = [
   {
     path: "/",
+    element: <MainLayout />,
     children: [
       { path: "home", element: <Home /> },
       { path: "dashboard", element: <Dashboard /> },
