@@ -35,7 +35,12 @@ function SettingsLoads(settings) {
   window.localStorage.setItem("settings", JSON.stringify(settings));
 }
 
-function SettingsProvider(props) {
+export const SettingsContext = createContext({
+  settings: initialSettings,
+  saveSettings: () => {},
+});
+
+export function SettingsProvider(props) {
   const { children } = props; // the children in component tree
   const [settings, setSettings] = useState(initialSettings);
 
@@ -51,11 +56,6 @@ function SettingsProvider(props) {
     SettingsLoads(updatedSettings);
   }
 
-  const SettingsContext = createContext({
-    settings: initialSettings,
-    saveSettings: () => {},
-  });
-
   return (
     <SettingsContext.Provider value={{ settings, saveSettings }}>
       {children}
@@ -63,4 +63,4 @@ function SettingsProvider(props) {
   );
 }
 
-export default SettingsProvider;
+export default SettingsContext;
