@@ -10,6 +10,7 @@ const Dashboard = Suspense(lazy(() => import("./pages/Dashboard")));
 
 // Console
 const SignIn = Suspense(lazy(() => import("./pages/console/SignIn")));
+const Welcome = Suspense(lazy(() => import("./pages/console/Welcome")));
 
 // Error
 const Forbidden = Suspense(lazy(() => import("./errors/Forbidden")));
@@ -21,6 +22,7 @@ const routes = [
     path: "console",
     element: <ConsoleLayout />,
     children: [
+      { path: "", element: <Welcome /> },
       { path: "signin", element: <SignIn /> },
       // {path: "login", element: <LogIn/>},
       // {path: "logout", element: <LogOut/>},
