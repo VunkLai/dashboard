@@ -2,7 +2,7 @@ import React from "react";
 import { useRoutes } from "react-router-dom";
 import { CssBaseline, ThemeProvider } from "@material-ui/core";
 
-import SettingsDrawer from "./components/settings/SettingsDrawer";
+// import SettingsDrawer from "./components/settings/SettingsDrawer";
 import routes from "./routes";
 import useThemes from "./theme";
 import { THEMES } from "./constants";
@@ -17,7 +17,8 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <SettingsDrawer />
+      {/* Disable for develop console */}
+      {/* <SettingsDrawer /> */}
       {content}
     </ThemeProvider>
   );
